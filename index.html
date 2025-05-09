@@ -3,139 +3,135 @@
 <head>
   <meta charset="UTF-8">
   <title>Deep Sea Mining</title>
-  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500;700&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
   <style>
     body {
-      background-color: #e6f0f7;
+      background: url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e') no-repeat center center fixed;
+      background-size: cover;
       font-family: 'Quicksand', sans-serif;
       margin: 0;
       padding: 0;
-      color: #002244;
+      color: #e0f7fa;
+    }
+    .overlay {
+      background-color: rgba(0, 0, 30, 0.7);
+      min-height: 100vh;
+      padding-bottom: 50px;
     }
     header {
-      background: linear-gradient(120deg, #00bcd4, #2196f3);
-      padding: 30px 20px;
       text-align: center;
-      color: white;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+      padding: 40px 20px;
     }
     header h1 {
-      margin: 0;
       font-size: 3em;
-      text-shadow: 0 2px 10px rgba(0,0,0,0.2);
+      color: #ffffff;
+      text-shadow: 0 0 10px #00ffff, 0 0 25px #00ffff;
+      animation: glow 2s ease-in-out infinite alternate;
+    }
+    @keyframes glow {
+      from { text-shadow: 0 0 5px #00ffff; }
+      to { text-shadow: 0 0 20px #00ffff, 0 0 40px #00ffff; }
     }
     nav {
-      background-color: #ffffff;
-      padding: 15px;
       text-align: center;
-      box-shadow: 0 1px 5px rgba(0,0,0,0.1);
+      background-color: rgba(0, 40, 70, 0.6);
+      padding: 12px;
     }
     nav a {
-      color: #006699;
-      text-decoration: none;
+      color: #aeefff;
       margin: 0 20px;
+      text-decoration: none;
       font-weight: bold;
-      transition: color 0.3s;
+      font-size: 1.1em;
     }
     nav a:hover {
-      color: #003366;
+      color: #ffffff;
     }
     section {
-      padding: 60px 20px;
+      background-color: rgba(0, 30, 60, 0.8);
+      margin: 40px auto;
       max-width: 900px;
-      margin: auto;
-      background-color: white;
-      border-radius: 12px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-      margin-top: 40px;
+      padding: 40px 30px;
+      border-radius: 20px;
+      box-shadow: 0 0 25px rgba(0,255,255,0.2);
     }
     section h2 {
-      color: #003366;
-      border-bottom: 2px solid #00bcd4;
-      padding-bottom: 10px;
+      color: #00ffff;
+      text-shadow: 0 0 8px #00ffff;
       margin-bottom: 20px;
     }
     section p, section li {
       font-size: 1.1em;
-      line-height: 1.6;
-      color: #002244;
-    }
-    section ul {
-      padding-left: 20px;
+      line-height: 1.7em;
     }
     section img {
-      max-width: 100%;
+      width: 100%;
       margin: 20px 0;
       border-radius: 10px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      box-shadow: 0 0 10px rgba(0, 255, 255, 0.3);
     }
     footer {
-      background-color: #003366;
-      color: white;
       text-align: center;
       padding: 20px;
+      background-color: rgba(0, 20, 40, 0.8);
       font-size: 0.9em;
-      margin-top: 60px;
+      color: #bbdefb;
     }
   </style>
 </head>
 <body>
-  <header>
-    <h1>Deep Sea Mining</h1>
-  </header>
+  <div class="overlay">
+    <header>
+      <h1>Deep Sea Mining</h1>
+    </header>
+    <nav>
+      <a href="#background">Background</a>
+      <a href="#countries">Countries Affected</a>
+      <a href="#solutions">Solutions</a>
+      <a href="#resources">Resources</a>
+    </nav>
 
-  <nav>
-    <a href="#background">Background</a>
-    <a href="#countries">Countries Affected</a>
-    <a href="#solutions">Solutions</a>
-    <a href="#resources">Resources</a>
-  </nav>
+    <section id="background" data-aos="fade-up">
+      <h2>Background</h2>
+      <p>Deep sea mining is the retrieval of minerals from the ocean floor — including cobalt, nickel, and rare earth elements. These are used in batteries, electronics, and clean energy tech.</p>
+      <p>The process disturbs delicate marine ecosystems, stirs sediment plumes, and generates light and noise pollution that threatens undiscovered species in the darkest parts of the sea.</p>
+      <img src="https://upload.wikimedia.org/wikipedia/commons/0/04/Ocean-mining.png" alt="Mining impact diagram">
+    </section>
 
-  <section id="background">
-    <h2>Background</h2>
-    <p>Deep sea mining refers to extracting minerals from the ocean floor, including rare earth elements, cobalt, and manganese nodules. It's driven by demand for electronics, green energy tech, and industrial applications.</p>
-    <p>However, it poses serious risks: destruction of unknown ecosystems, long-lasting sediment plumes, and noise pollution that disturbs marine life.</p>
-    <img src="https://cdn.pixabay.com/photo/2020/03/02/18/13/environment-4898268_960_720.jpg" alt="Underwater ecosystem illustration">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/04/Ocean-mining.png/800px-Ocean-mining.png" alt="Infographic on deep sea mining impacts">
-  </section>
+    <section id="countries" data-aos="fade-left">
+      <h2>Countries Affected</h2>
+      <ul>
+        <li><strong>Papua New Guinea:</strong> Proposed Solwara 1 project drew global protest due to ecological risk.</li>
+        <li><strong>Japan:</strong> Ran experimental mining projects in 2020 to explore ocean-based resources.</li>
+        <li><strong>Cook Islands:</strong> Exploring large-scale seabed mining licenses — sparking public concern.</li>
+      </ul>
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/World_map_blank_without_borders.svg/1200px-World_map_blank_without_borders.svg.png" alt="Map of affected areas">
+    </section>
 
-  <section id="countries">
-    <h2>Countries Affected</h2>
-    <p>Top 3 regions heavily involved in or impacted by deep sea mining:</p>
-    <ul>
-      <li><strong>Papua New Guinea:</strong> Site of the Solwara 1 project. Environmental concerns halted progress.</li>
-      <li><strong>Japan:</strong> Conducted experimental deep-sea mining off Okinawa.</li>
-      <li><strong>Cook Islands:</strong> Granting exploration licenses to companies, raising environmental debates.</li>
-    </ul>
-    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/World_map_blank_without_borders.svg/1200px-World_map_blank_without_borders.svg.png" alt="World map with mining zones marked">
-  </section>
+    <section id="solutions" data-aos="fade-right">
+      <h2>Solutions & Conclusions</h2>
+      <p>Environmental groups, Indigenous activists, and scientists are calling for a moratorium until we better understand the impact. Nations are pushing for treaties through the International Seabed Authority (ISA).</p>
+      <p>On an individual level: support sustainable tech, vote for climate-conscious policy, and spread awareness about deep ocean conservation.</p>
+      <img src="https://cdn.pixabay.com/photo/2016/11/19/14/00/earth-1837425_960_720.jpg" alt="Earth image">
+    </section>
 
-  <section id="solutions">
-    <h2>Solutions & Conclusions</h2>
-    <p><strong>Global Actions:</strong> The UN and environmental groups have called for a moratorium until impacts are better understood.</p>
-    <p><strong>Individual Actions:</strong> Support legislation, raise awareness, reduce demand for mined tech materials.</p>
-    <p><strong>Our Ideas:</strong> Fund marine restoration, incentivize recycling tech components, invest in alternative energy sources that reduce rare mineral dependency.</p>
-    <img src="https://cdn.pixabay.com/photo/2016/11/19/14/00/earth-1837425_960_720.jpg" alt="Earth and hands representing conservation">
-  </section>
+    <section id="resources" data-aos="zoom-in">
+      <h2>Resources & Credits</h2>
+      <ul>
+        <li><a href="https://www.youtube.com/watch?v=Fcr4w5v3C1o" target="_blank">YouTube: What is Deep Sea Mining?</a></li>
+        <li><a href="https://www.greenpeace.org/international/story/29598/what-is-deep-sea-mining-and-why-is-it-bad-news/" target="_blank">Greenpeace Article</a></li>
+        <li>Sources: National Geographic, BBC News, Greenpeace.org</li>
+      </ul>
+    </section>
 
-  <section id="resources">
-    <h2>Educational Links, Videos & Citations</h2>
-    <ul>
-      <li><a href="https://www.youtube.com/watch?v=Fcr4w5v3C1o" target="_blank">YouTube: What is Deep Sea Mining?</a></li>
-      <li><a href="https://www.greenpeace.org/international/story/29598/what-is-deep-sea-mining-and-why-is-it-bad-news/" target="_blank">Greenpeace: Deep Sea Mining Explained</a></li>
-      <li>Citation 1: National Geographic, "Deep Sea Mining Explained," 2023</li>
-      <li>Citation 2: BBC News, "Should We Mine the Ocean?", 2022</li>
-      <li>Citation 3: Greenpeace, "What is Deep Sea Mining?", 2021</li>
-    </ul>
-  </section>
+    <footer>
+      &copy; 2025 Deep Sea Awareness Project | Designed by Lara 🌊
+    </footer>
+  </div>
 
-  <footer>
-    &copy; 2025 Deep Sea Awareness Project | Site by Lara
-  </footer>
-</body>
-</html>
-
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script>
     AOS.init();
   </script>
 </body>
