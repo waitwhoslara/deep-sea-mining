@@ -13,10 +13,12 @@
       font-family: 'Quicksand', sans-serif;
       margin: 0;
       padding: 0;
+      overflow-x: hidden;
     }
     .overlay {
       background-color: rgba(0, 0, 0, 0.6);
       min-height: 100vh;
+      padding-bottom: 100px;
     }
     header {
       background-color: transparent;
@@ -27,20 +29,20 @@
       margin: 0;
       font-size: 3em;
       color: white;
-      text-shadow: 0 0 10px #00ffff, 0 0 20px #00ffff;
-      animation: glow 2s ease-in-out infinite alternate;
+      text-shadow: 0 0 15px #aeefff, 0 0 25px #00ffff;
+      animation: glow 3s ease-in-out infinite alternate;
     }
     @keyframes glow {
       from {
-        text-shadow: 0 0 5px #00ffff, 0 0 10px #00ffff;
+        text-shadow: 0 0 5px #00ffff;
       }
       to {
-        text-shadow: 0 0 20px #00ffff, 0 0 30px #00ffff;
+        text-shadow: 0 0 20px #00ffff, 0 0 40px #00ffff;
       }
     }
     nav {
       text-align: center;
-      background-color: rgba(0, 20, 40, 0.6);
+      background-color: rgba(0, 20, 40, 0.5);
       padding: 10px;
     }
     nav a {
@@ -49,6 +51,10 @@
       text-decoration: none;
       font-weight: bold;
       font-size: 1.1em;
+      transition: color 0.3s;
+    }
+    nav a:hover {
+      color: #ffffff;
     }
     section {
       padding: 40px 20px;
@@ -56,7 +62,7 @@
       margin: auto;
     }
     section h2 {
-      color: #00ffff;
+      color: #aeefff;
       margin-bottom: 15px;
       text-shadow: 0 0 10px #00ffff;
     }
@@ -67,7 +73,7 @@
       border-radius: 10px;
     }
     footer {
-      background-color: #001933;
+      background-color: rgba(0, 25, 50, 0.7);
       text-align: center;
       padding: 15px;
       color: #cccccc;
@@ -78,14 +84,16 @@
       bottom: -100px;
       width: 60px;
       height: 60px;
-      background: url('https://upload.wikimedia.org/wikipedia/commons/7/75/Blue_jellyfish.png') no-repeat center;
+      background: url('https://upload.wikimedia.org/wikipedia/commons/7/75/Blue_jellyfish.png') no-repeat center center;
       background-size: contain;
-      animation: float 10s linear infinite;
-      z-index: 1;
+      animation: float 18s linear infinite;
+      z-index: 0;
+      opacity: 0.6;
     }
-    .jelly:nth-child(2) { left: 10%; animation-delay: 0s; }
-    .jelly:nth-child(3) { left: 30%; animation-delay: 3s; }
-    .jelly:nth-child(4) { left: 60%; animation-delay: 6s; }
+    .jelly:nth-child(2) { left: 5%; animation-delay: 0s; }
+    .jelly:nth-child(3) { left: 30%; animation-delay: 4s; }
+    .jelly:nth-child(4) { left: 60%; animation-delay: 8s; }
+    .jelly:nth-child(5) { left: 85%; animation-delay: 12s; }
     @keyframes float {
       0% { transform: translateY(0); opacity: 0.3; }
       50% { opacity: 0.7; }
@@ -94,11 +102,12 @@
   </style>
 </head>
 <body>
-  <div class="overlay">
-    <div class="jelly"></div>
-    <div class="jelly"></div>
-    <div class="jelly"></div>
+  <div class="jelly"></div>
+  <div class="jelly"></div>
+  <div class="jelly"></div>
+  <div class="jelly"></div>
 
+  <div class="overlay">
     <header data-aos="fade-down">
       <h1>Deep Sea Mining</h1>
     </header>
