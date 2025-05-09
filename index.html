@@ -4,39 +4,51 @@
   <meta charset="UTF-8">
   <title>Deep Sea Mining</title>
   <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500;700&display=swap" rel="stylesheet">
   <style>
     body {
       background: url('deep%20se.jpg') no-repeat center center fixed;
       background-size: cover;
       color: white;
-      font-family: Arial, sans-serif;
+      font-family: 'Quicksand', sans-serif;
       margin: 0;
       padding: 0;
     }
     .overlay {
-      background-color: rgba(0, 0, 0, 0.7);
+      background-color: rgba(0, 0, 0, 0.6);
       min-height: 100vh;
     }
     header {
-      background-color: #003366;
-      padding: 20px;
+      background-color: transparent;
+      padding: 30px;
       text-align: center;
     }
     header h1 {
       margin: 0;
-      color: #00ffff;
-      font-size: 2.5em;
+      font-size: 3em;
+      color: white;
+      text-shadow: 0 0 10px #00ffff, 0 0 20px #00ffff;
+      animation: glow 2s ease-in-out infinite alternate;
+    }
+    @keyframes glow {
+      from {
+        text-shadow: 0 0 5px #00ffff, 0 0 10px #00ffff;
+      }
+      to {
+        text-shadow: 0 0 20px #00ffff, 0 0 30px #00ffff;
+      }
     }
     nav {
       text-align: center;
-      background-color: #002244;
+      background-color: rgba(0, 20, 40, 0.6);
       padding: 10px;
     }
     nav a {
-      color: #00ffff;
+      color: #aeefff;
       margin: 0 15px;
       text-decoration: none;
       font-weight: bold;
+      font-size: 1.1em;
     }
     section {
       padding: 40px 20px;
@@ -46,6 +58,13 @@
     section h2 {
       color: #00ffff;
       margin-bottom: 15px;
+      text-shadow: 0 0 10px #00ffff;
+    }
+    section img {
+      max-width: 100%;
+      margin: 20px 0;
+      border: 2px solid #00ffff;
+      border-radius: 10px;
     }
     footer {
       background-color: #001933;
@@ -54,38 +73,80 @@
       color: #cccccc;
       font-size: 0.9em;
     }
+    .jelly {
+      position: fixed;
+      bottom: -100px;
+      width: 60px;
+      height: 60px;
+      background: url('https://upload.wikimedia.org/wikipedia/commons/7/75/Blue_jellyfish.png') no-repeat center;
+      background-size: contain;
+      animation: float 10s linear infinite;
+      z-index: 1;
+    }
+    .jelly:nth-child(2) { left: 10%; animation-delay: 0s; }
+    .jelly:nth-child(3) { left: 30%; animation-delay: 3s; }
+    .jelly:nth-child(4) { left: 60%; animation-delay: 6s; }
+    @keyframes float {
+      0% { transform: translateY(0); opacity: 0.3; }
+      50% { opacity: 0.7; }
+      100% { transform: translateY(-110vh); opacity: 0; }
+    }
   </style>
 </head>
 <body>
   <div class="overlay">
+    <div class="jelly"></div>
+    <div class="jelly"></div>
+    <div class="jelly"></div>
+
     <header data-aos="fade-down">
       <h1>Deep Sea Mining</h1>
     </header>
     <nav data-aos="fade-down">
-      <a href="#intro">Intro</a>
-      <a href="#problems">Problems</a>
+      <a href="#background">Background</a>
+      <a href="#countries">Countries Affected</a>
       <a href="#solutions">Solutions</a>
-      <a href="#sources">Sources</a>
+      <a href="#resources">Resources</a>
     </nav>
-    <section id="intro" data-aos="fade-up">
-      <h2>What is Deep Sea Mining?</h2>
-      <p>Deep sea mining is the process of retrieving mineral resources from the ocean floor, typically at depths of 1,000 meters or more. It targets resources like manganese nodules, polymetallic sulfides, and cobalt-rich crusts.</p>
+
+    <section id="background" data-aos="fade-up">
+      <h2>Background</h2>
+      <p>Deep sea mining refers to extracting minerals from the ocean floor, including rare earth elements, cobalt, and manganese nodules. It's driven by demand for electronics, green energy tech, and industrial applications.</p>
+      <p>However, it poses serious risks: destruction of unknown ecosystems, long-lasting sediment plumes, and noise pollution that disturbs marine life.</p>
+      <img src="https://cdn.pixabay.com/photo/2020/03/02/18/13/environment-4898268_960_720.jpg" alt="Underwater ecosystem illustration">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/04/Ocean-mining.png/800px-Ocean-mining.png" alt="Infographic on deep sea mining impacts">
     </section>
-    <section id="problems" data-aos="fade-left">
-      <h2>Why Is It a Problem?</h2>
-      <p>Deep sea mining disrupts fragile marine ecosystems, potentially causing irreversible damage to species we barely understand. It stirs up sediment plumes and noise that can harm sea life far beyond the mining zone.</p>
-    </section>
-    <section id="solutions" data-aos="fade-right">
-      <h2>What Can Be Done?</h2>
-      <p>Some experts call for a global moratorium on deep sea mining until environmental impacts are better understood. Alternatives include improved recycling, land-based mining reforms, and stricter regulations on deep-sea activity.</p>
-    </section>
-    <section id="sources" data-aos="zoom-in">
-      <h2>Sources</h2>
+
+    <section id="countries" data-aos="fade-left">
+      <h2>Countries Affected</h2>
+      <p>Top 3 regions heavily involved in or impacted by deep sea mining:</p>
       <ul>
-        <li><a href="https://www.nationalgeographic.com/environment/article/deep-sea-mining">National Geographic: Deep Sea Mining</a></li>
-        <li><a href="https://www.bbc.com/news/science-environment-66241462">BBC: Should We Mine the Ocean?</a></li>
+        <li><strong>Papua New Guinea:</strong> Site of the Solwara 1 project. Environmental concerns halted progress.</li>
+        <li><strong>Japan:</strong> Conducted experimental deep-sea mining off Okinawa.</li>
+        <li><strong>Cook Islands:</strong> Granting exploration licenses to companies, raising environmental debates.</li>
+      </ul>
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/World_map_blank_without_borders.svg/1200px-World_map_blank_without_borders.svg.png" alt="World map with mining zones marked" style="border:none;">
+    </section>
+
+    <section id="solutions" data-aos="fade-right">
+      <h2>Solutions & Conclusions</h2>
+      <p><strong>Global Actions:</strong> The UN and environmental groups have called for a moratorium until impacts are better understood.</p>
+      <p><strong>Individual Actions:</strong> Support legislation, raise awareness, reduce demand for mined tech materials.</p>
+      <p><strong>Our Ideas:</strong> Fund marine restoration, incentivize recycling tech components, invest in alternative energy sources that reduce rare mineral dependency.</p>
+      <img src="https://cdn.pixabay.com/photo/2016/11/19/14/00/earth-1837425_960_720.jpg" alt="Earth and hands representing conservation">
+    </section>
+
+    <section id="resources" data-aos="zoom-in">
+      <h2>Educational Links, Videos & Citations</h2>
+      <ul>
+        <li><a href="https://www.youtube.com/watch?v=Fcr4w5v3C1o" target="_blank">YouTube: What is Deep Sea Mining?</a></li>
+        <li><a href="https://www.greenpeace.org/international/story/29598/what-is-deep-sea-mining-and-why-is-it-bad-news/" target="_blank">Greenpeace: Deep Sea Mining Explained</a></li>
+        <li>Citation 1: National Geographic, "Deep Sea Mining Explained," 2023</li>
+        <li>Citation 2: BBC News, "Should We Mine the Ocean?", 2022</li>
+        <li>Citation 3: Greenpeace, "What is Deep Sea Mining?", 2021</li>
       </ul>
     </section>
+
     <footer data-aos="fade-up">
       &copy; 2025 Deep Sea Awareness Project | Site by Lara
     </footer>
