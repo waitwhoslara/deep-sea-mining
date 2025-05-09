@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <title>Deep Sea Mining</title>
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
   <style>
     body {
       background-color: #001f3f;
@@ -51,36 +52,41 @@
   </style>
 </head>
 <body>
-  <header>
+  <header data-aos="fade-down">
     <h1>Deep Sea Mining</h1>
   </header>
-  <nav>
+  <nav data-aos="fade-down">
     <a href="#intro">Intro</a>
     <a href="#problems">Problems</a>
     <a href="#solutions">Solutions</a>
     <a href="#sources">Sources</a>
   </nav>
-  <section id="intro">
+  <section id="intro" data-aos="fade-up">
     <h2>What is Deep Sea Mining?</h2>
     <p>Deep sea mining is the process of retrieving mineral resources from the ocean floor, typically at depths of 1,000 meters or more. It targets resources like manganese nodules, polymetallic sulfides, and cobalt-rich crusts.</p>
   </section>
-  <section id="problems">
+  <section id="problems" data-aos="fade-left">
     <h2>Why Is It a Problem?</h2>
     <p>Deep sea mining disrupts fragile marine ecosystems, potentially causing irreversible damage to species we barely understand. It stirs up sediment plumes and noise that can harm sea life far beyond the mining zone.</p>
   </section>
-  <section id="solutions">
+  <section id="solutions" data-aos="fade-right">
     <h2>What Can Be Done?</h2>
     <p>Some experts call for a global moratorium on deep sea mining until environmental impacts are better understood. Alternatives include improved recycling, land-based mining reforms, and stricter regulations on deep-sea activity.</p>
   </section>
-  <section id="sources">
+  <section id="sources" data-aos="zoom-in">
     <h2>Sources</h2>
     <ul>
       <li><a href="https://www.nationalgeographic.com/environment/article/deep-sea-mining">National Geographic: Deep Sea Mining</a></li>
       <li><a href="https://www.bbc.com/news/science-environment-66241462">BBC: Should We Mine the Ocean?</a></li>
     </ul>
   </section>
-  <footer>
+  <footer data-aos="fade-up">
     &copy; 2025 Deep Sea Awareness Project | Site by Lara
   </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
 </body>
 </html>
